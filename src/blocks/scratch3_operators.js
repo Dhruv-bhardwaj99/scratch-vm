@@ -33,7 +33,8 @@ class Scratch3OperatorsBlocks {
             operator_contains: this.contains,
             operator_mod: this.mod,
             operator_round: this.round,
-            operator_mathop: this.mathop
+            operator_mathop: this.mathop,
+            operator_square: this.square,
         };
     }
 
@@ -102,6 +103,10 @@ class Scratch3OperatorsBlocks {
             return '';
         }
         return str.charAt(index);
+    }
+
+    square (args) {
+        return Math.pow(Cast.toNumber(args.NUM), 2);
     }
 
     length (args) {
